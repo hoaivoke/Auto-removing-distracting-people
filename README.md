@@ -32,24 +32,3 @@ The repository incorporates notebooks and scripts benchmarking several architect
 
 * **YOLOv8 (Detection + Segmentation):** Optimized using `yolov8n-seg.pt` for efficient edge-cases and bounding box accuracies categorized by object sizes (Small, Medium, Large).
 * **Grounding DINO + SAM:** Offers superb open-vocabulary language-grounded detection paired with precise pixel-level mask segmentation.
-
----
-
-## 📁 Repository Structure
-To maintain a production-ready codebase, the directory structure should look like this:
-
-```text
-├── data/
-│   ├── coco_person.yaml       # Configuration file for tracking 'person' class paths
-│   ├── train/                 # Extracted COCO 2017 training subsets (images/labels)
-│   └── val/                   # Extracted COCO 2017 validation subsets
-├── notebooks/
-│   └── auto-removing-distracting-people.ipynb  # Comprehensive Kaggle/Colab training notebook
-├── models/
-│   └── yolov8n-seg.pt         # Pretrained or fine-tuned weights
-├── src/
-│   ├── detect.py              # Scripts managing Grounding DINO/YOLO inference
-│   ├── filter.py              # Filtering rules (center proximity, size metrics)
-│   └── inpaint.py             # Stable Diffusion pipeline configuration
-├── requirements.txt           # Main pipeline dependencies
-└── README.md                  # Project documentation
